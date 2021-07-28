@@ -10,9 +10,11 @@ import { Route, Switch, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function App() {
+	const [search, setSearch] = useState([]);
+
 	return (
 		<div className="App">
-			<Header />
+			<Header title="React JS Blog" />
 			<Nav />
 			<Switch>
 				<Route exact path="/">
