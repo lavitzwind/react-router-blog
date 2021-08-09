@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Home from "./Home";
 import NewPost from "./NewPost";
 import PostPage from "./PostPage";
+import EditPost from "./EditPost";
 import About from "./About";
 import Missing from "./Missing";
 import { Route, Switch, useHistory } from "react-router-dom";
@@ -107,6 +108,16 @@ function App() {
 						setPostTitle={setPostTitle}
 						postBody={postBody}
 						setPostBody={setPostBody}
+					/>
+				</Route>
+				<Route path="/edit/:id">
+					<EditPost
+						posts={posts}
+						handleEdit={handleEdit}
+						editTitle={editTitle}
+						setEditTitle={setEditTitle}
+						editBody={editBody}
+						setEditBody={setEditBody}
 					/>
 				</Route>
 				<Route path="/post/:id">
