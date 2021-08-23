@@ -21,8 +21,14 @@
     {
       "id": 6,
       "title": "lol",
-      "datetime": "August 23, 2021 5:35:26 AM",
-      "body": "test fix new, test again. test again."
+      "datetime": "August 23, 2021 6:20:04 AM",
+      "body": "edited!"
+    },
+    {
+      "id": 7,
+      "title": "test post number one",
+      "datetime": "August 23, 2021 6:19:49 AM",
+      "body": "hello this has been edited :D. edited again."
     }
   ]
 }
