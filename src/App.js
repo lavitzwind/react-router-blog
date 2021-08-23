@@ -89,24 +89,10 @@ function App() {
 		<div className="App">
 			<DataProvider>
 				<Header title="React JS Blog" />
-				<Nav search={search} setSearch={setSearch} />
+				<Nav />
 				<Switch>
-					<Route exact path="/">
-						<Home
-							posts={searchResults}
-							fetchError={fetchError}
-							isLoading={isLoading}
-						/>
-					</Route>
-					<Route exact path="/post">
-						<NewPost
-							handleSubmit={handleSubmit}
-							postTitle={postTitle}
-							setPostTitle={setPostTitle}
-							postBody={postBody}
-							setPostBody={setPostBody}
-						/>
-					</Route>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/post" component={NewPost} />
 					<Route path="/edit/:id">
 						<EditPost
 							posts={posts}
