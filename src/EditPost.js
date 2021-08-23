@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
-import { format } from "date-fns";
 import api from "./api/posts";
+import { format } from "date-fns";
 import DataContext from "./context/DataContext";
 
 const EditPost = () => {
@@ -24,7 +24,9 @@ const EditPost = () => {
 		const updatedPost = { id, title: editTitle, datetime, body: editBody };
 		try {
 			const response = await api.put(`/posts/${id}`, updatedPost);
-			setPosts(posts.map((post) => (post.id ? { ...response.data } : post)));
+			setPosts(
+				posts.map((post) => (post.id === id ? { ...response.data } : post))
+			);
 			setEditTitle("");
 			setEditBody("");
 			history.push("/");
